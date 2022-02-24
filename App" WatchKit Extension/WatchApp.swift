@@ -1,10 +1,9 @@
-
 import SwiftUI
 import Foundation
 import WatchKit
 
 @main
-struct App_App : App {
+struct WatchApp : App {
     #if os(watchOS)
     @WKExtensionDelegateAdaptor(ConnectivityProvider.self) var delegate
     #endif
@@ -14,7 +13,7 @@ struct App_App : App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView(text: delegate.label)
+                ContentView()
             }
         }
         #if os(watchOS)

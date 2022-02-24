@@ -1,20 +1,15 @@
-//
-//  NotificationView.swift
-//  App" WatchKit Extension
-//
-//  Created by Sara Izzo on 16/02/22.
-//
-
 import SwiftUI
 
 struct NotificationView: View {
+    var msg: String
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(msg).padding()
     }
 }
 
 struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        NotificationView(msg: "Test")
     }
 }

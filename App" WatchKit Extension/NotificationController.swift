@@ -1,18 +1,23 @@
 //
 //  NotificationController.swift
-//  App" WatchKit Extension
+//  SignalKWatchApp WatchKit Extension
 //
-//  Created by Sara Izzo on 16/02/22.
+//  Created by Emanuel Di Nardo on 01/02/22.
 //
 
 import WatchKit
 import SwiftUI
 import UserNotifications
+import Foundation
+import Combine
 
 class NotificationController: WKUserNotificationHostingController<NotificationView> {
-
+    override init() {
+        super.init()
+    }
+    
     override var body: NotificationView {
-        return NotificationView()
+        return NotificationView(msg: "")
     }
 
     override func willActivate() {
@@ -26,8 +31,6 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
     }
 
     override func didReceive(_ notification: UNNotification) {
-        // This method is called when a notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
+        
     }
 }
